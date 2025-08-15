@@ -5,6 +5,15 @@ import {
 } from "../utils/webPushUtils";
 
 export const subscribeUser = async () => {
+    //
+    // *** Make this object ***
+    //
+    // {
+    //		"endpoint": "https://fcm.googleapis.com/fcm/send/abc123...",
+    //      "p256dh": "BOP...",
+    //      "auth": "xyz..."
+    // }
+
     const permission = await Notification.requestPermission();
     if (permission !== "granted") {
         console.log("Notification permission not granted");
